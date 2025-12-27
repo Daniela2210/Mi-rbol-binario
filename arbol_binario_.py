@@ -4,6 +4,7 @@ class Nodo:
         self.izquierda = None
         self.derecha = None
 
+
 class ArbolBinario:
     def __init__(self):
         self.raiz = None
@@ -43,3 +44,26 @@ class ArbolBinario:
             self.postorder(nodo.izquierda)
             self.postorder(nodo.derecha)
             print(nodo.valor, end=" ")
+
+
+if __name__ == "__main__":
+    arbol = ArbolBinario()
+    datos = [50, 30, 70, 20, 40, 60, 80]
+
+    for d in datos:
+        arbol.insertar(d)
+
+    print("Recorrido Inorder:")
+    arbol.inorder(arbol.raiz)
+
+    print("\nRecorrido Preorder:")
+    arbol.preorder(arbol.raiz)
+
+    print("\nRecorrido Postorder:")
+    arbol.postorder(arbol.raiz)
+
+
+
+
+
+
